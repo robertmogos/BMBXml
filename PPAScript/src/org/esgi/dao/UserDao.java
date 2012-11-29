@@ -87,7 +87,6 @@ public class UserDao
 
 	public IUser getUser(String log, String pwd)
 	{
-		
 		DocumentTraversal dot = (DocumentTraversal)this.root_;
 		NodeIterator it = dot.createNodeIterator(this.root_.getDocumentElement(),NodeFilter.SHOW_ALL,null,true);
 		String secure_pwd = StringEncoder.encode(pwd, StringEncoder.Algorithm.SHA1);
