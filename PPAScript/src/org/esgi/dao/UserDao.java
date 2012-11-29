@@ -84,6 +84,27 @@ public class UserDao
 		return false;
 	}
 	
+
+	public IUser getUser(String log, String pwd)
+	{
+		
+		DocumentTraversal dot = (DocumentTraversal)this.root_;
+		NodeIterator it = dot.createNodeIterator(this.root_.getDocumentElement(),NodeFilter.SHOW_ALL,null,true);
+		String secure_pwd = StringEncoder.encode(pwd, StringEncoder.Algorithm.SHA1);
+		Node n = null;
+		IUser u = null;
+		while((n=it.nextNode())!=null)
+		{
+			if(n.getNodeName().equals("bmb:user"))
+			{
+				 u = getUserFromNode(n);
+				 if(u.getLogin().equals(log) && u.getPassword().equals(secure_pwd))
+					 return u;
+			}
+		}
+		return null;
+	}
+	
 	private String getCrossPlatformFilePath()
 	{
 		String filePath = this.getFile().toURI().getPath();
