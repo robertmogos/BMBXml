@@ -63,5 +63,8 @@ public class AdminServlet extends HttpServlet
     	System.out.println(UserDao.getSharedUserDao());
     	Writer writer = response.getWriter();
 		writer.write("<html><head><title>User Create</title></head><body>"+user.canCreate()+"</body></html>");
+		
+		IUser savedUser = UserDao.getSharedUserDao().getUser("roubert","me0c");
+		System.out.println(savedUser);
     }
 }
