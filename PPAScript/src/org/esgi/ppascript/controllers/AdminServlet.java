@@ -18,6 +18,7 @@ import org.esgi.dao.UserDao;
 
 public class AdminServlet extends HttpServlet 
 {
+	
 	private static final long serialVersionUID = 1L;
 	private Pattern _actionPattern;
 

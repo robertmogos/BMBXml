@@ -69,3 +69,8 @@ local.properties
  
 # PDT-specific
 .buildpath
+PPAScript/build/classes/org/esgi/util/StringEncoder.class
+
+PPAScript/.classpath
+
+PPAScript/build/classes/org/esgi/ppascript/controllers/AdminServlet.class
