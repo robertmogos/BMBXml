@@ -1,0 +1,9 @@
+<bmb:users 	xmlns:bmb="http://bmb.org"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://bmb.org users.xsd">
+	<bmb:user>
+		<bmb:login>furkan</bmb:login>
+		<bmb:pwd>dsdsdsfddsf</bmb:pwd>
+		<bmb:rules>0001</bmb:rules>
+	</bmb:user>
+</bmb:users>
